@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel='stylesheet' href="index.css">
+
+</head>
+<body>
+   
+    <h1 id="title"></h1>
+    <p id="time"></p>
+    <div id="content">
+    <img id="picture" src="skog.jpeg" alt="Bild">
+    </div>
+<div class = "rox">
+    <div style="display: flex; align-items: center;">
+        <button class='button'onclick="changeBgcol()">Change Bg</button>
+        <button class='button'onclick="changePicture()">Change picture</button>
+        <!-- <button class='button'onclick="goodvibes()">Good vibes</button> -->
+        <button class='button'onclick="Header()">Header</button>
+    </div>
+    <div style="display: flex; align-items: center;">
+        <button class='button'onclick="goodvibes()">Good vibes</button>
+        <!-- <button class='button'onclick="changePicture()">Change picture</button> -->
+        <button class='button'onclick="hidePicture()">Hide picture</button>
+        <button class='button'onclick="Removeheader()">Remove header</button>
+    </div>
+    <div style="display: flex; align-items: center;">
+        <button class='button'onclick="Time()">Time</button>
+        <!-- <button class='button'onclick="changePicture()">Change picture</button> -->
+        <!-- <button class='button'onclick="hidePicture()">Hide picture</button> -->
+        <button class='button'onclick="showPicture()">Show picture</button>
+        <button class='button'onclick="showHeader()">Show Header</button>
+    </div>
+</div>
+
+    
+    <script>
+
+        function changeBgcol()  {
+            document.body.style.backgroundColor = "Red";
+        }
+        function goodvibes()    {
+            document.getElementById("title").textContent = "Good vibes"
+        }
+        function Time() {
+            var timezone = new Date().toLocaleTimeString();
+            document.getElementById('time').textContent = 'Your time is: ' + timezone;
+        }
+        function changePicture() {
+            document.getElementById('picture').src = 'ele.jpg';
+        }
+
+        function hidePicture() {
+
+            document.getElementById('picture').style.display = 'none';
+        }
+        function showPicture(){
+
+            document.getElementById('picture').style.display = 'block';
+        }
+        
+    </script>
+
+    
+</body>
+</html>
